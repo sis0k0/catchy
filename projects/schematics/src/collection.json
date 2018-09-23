@@ -1,9 +1,9 @@
 {
   "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
   "schematics": {
-    "schematics": {
-      "description": "A blank schematic.",
-      "factory": "./schematics/index#schematics"
+    "ng-add": {
+      "description": "Sets up catchy-name library for usage.",
+      "factory": "./install/index#install"
     }
   }
 }
