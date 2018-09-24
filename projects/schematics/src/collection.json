@@ -3,7 +3,8 @@
   "schematics": {
     "ng-add": {
       "description": "Sets up catchy-name library for usage.",
-      "factory": "./install/index#install"
+      "factory": "./install/index#install",
+      "schema": "./install/schema.json"
     }
   }
 }
