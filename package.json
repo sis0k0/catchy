@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "build:demo": "ng serve -o",
-    "prepare:lib": "ng build catchy-name",
+    "build:schematics": "cd projects/schematics && npm run build && cp -r src/* ../../dist/catchy-name",
+    "prepare:lib": "ng build catchy-name && npm run build:schematics",
     "prebuild:lib": "npm run prepare:lib",
     "build:lib": "cd dist/catchy-name && npm pack"
   },
