@@ -4,7 +4,11 @@ import { SchematicTestRunner, UnitTestTree } from '@angular-devkit/schematics/te
 
 const collectionPath = join(__dirname, '../collection.json');
 
-export function createTestApp(appOptions = {}): UnitTestTree {
+export interface AppOptions {
+    name: string;
+}
+
+export function createTestApp(appOptions: AppOptions): UnitTestTree {
   const baseRunner = new SchematicTestRunner('schematics', collectionPath);
 
   const workspaceTree = baseRunner.runExternalSchematic(
@@ -22,7 +26,7 @@ export function createTestApp(appOptions = {}): UnitTestTree {
     'application',
     {
       ...appOptions,
-      name: 'myApp',
+      name: appOptions.name,
     },
     workspaceTree,
   );
