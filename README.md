@@ -11,6 +11,8 @@ Angular library exporting a single ngModule `CatchyNameModule` and a component `
 ### Build
 
 ```
+npm install
+cd ./projects/schematics && npm install && cd ../../
 npm run build:lib
 ```
 
@@ -44,6 +46,22 @@ export class AppModule { }
 **app.component.html**
 ``` html
 <awe-catchy-name></awe-catchy-name>
+```
+
+## Schematics
+
+### Build
+
+```
+cd ./projects/schematics && npm install
+npm run build
+```
+
+### Test
+
+```
+cd ./projects/schematics && npm install
+npm run test
 ```
 
 ## Demo application
